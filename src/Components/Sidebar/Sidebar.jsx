@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDom from "react-dom";
 import "./Sidebar.css";
+
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGhost } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +16,7 @@ class Sidebar extends Component {
     };
     render() {
         return (
-            <React.Fragment>
+            <div className="Sidebar">
                 <img src={this.state.imgURL} alt="" />
                 <div className="menuItems">
                     {/* <FontAwesomeIcon icon="ghost" /> */}
@@ -28,7 +29,7 @@ class Sidebar extends Component {
                 <div className="menuItems">Social Apperaence</div>
                 <div className="menuItems">Contact ME</div>
                 <div className="menuItems">Dev Stack</div>
-            </React.Fragment>
+            </div>
         );
     }
 }

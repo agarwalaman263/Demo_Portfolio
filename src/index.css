@@ -1,15 +1,15 @@
 * {
-    font-family: open sans;
+  font-family: open sans;
 }
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    /* background-color: grey; */
-    flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-image: url(./Components/main.jpg);
+  flex-direction: row;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
