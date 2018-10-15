@@ -1,0 +1,169 @@
+/* .progress-circle {
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15rem;
+  margin: 4rem 2rem 0;
+  position: relative;
+  width: 15rem;
+}
+.progress-circle:before {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  content: attr(data-progress) "%";
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: 1rem;
+  bottom: 1rem;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.progress-circle:after {
+  background-color: #0083ff;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.progress-circle:hover:before,
+.progress-circle:focus:before {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.progress-circle[data-progress="0"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(90deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="1"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(93.6deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="2"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(97.2deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="3"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(100.8deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="4"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(104.4deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="5"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(108deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="6"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(111.6deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="7"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(115.2deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="8"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(118.8deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="9"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(122.4deg, #0083ff 50%, #ddd 50%, #ddd);
+}
+.progress-circle[data-progress="10"]:after {
+  background-image: linear-gradient(
+      90deg,
+      #ddd 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(126deg, #0083ff 50%, #ddd 50%, #ddd);
+} */
+.Skillset {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px;
+}
+.domain {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.domain-title {
+  font-family: lato;
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+.domainstack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 5px;
+}
+.skill {
+  width: 33%;
+}
