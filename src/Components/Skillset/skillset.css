@@ -137,19 +137,27 @@
     linear-gradient(126deg, #0083ff 50%, #ddd 50%, #ddd);
 } */
 .Skillset {
+  /* box-sizing: border-box; */
   width: 100%;
-  height: 100%;
+  color: white;
+  /* height: 100%; */
+  /* flex: 0 0 auto; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   padding: 30px;
+  /* flex: 0 0 auto; */
+  overflow: auto;
 }
 .domain {
-  height: auto;
+  /* height: auto; */
   width: 100%;
+  height: max-content;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 }
 .domain-title {
   font-family: lato;
@@ -165,5 +173,11 @@
   padding-top: 5px;
 }
 .skill {
-  width: 33%;
+  min-width: 33%;
+  font-family: open sans;
+}
+@media only screen and (max-width: 600px) {
+  .skill {
+    width: 100%;
+  }
 }

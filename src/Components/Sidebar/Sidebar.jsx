@@ -14,7 +14,7 @@ import {
   faEnvelope,
   faStickyNote
 } from "@fortawesome/free-solid-svg-icons";
-
+import { NavLink } from "react-router-dom";
 library.add(faGhost);
 library.add(faHome);
 library.add(faGraduationCap);
@@ -50,15 +50,18 @@ class Sidebar extends Component {
         </div>
 
         <img src={this.state.imgURL} alt="" />
-        <div className="menuItems">
-          {/* <FontAwesomeIcon icon="ghost" /> */}
-          <FontAwesomeIcon icon="home" />
-          Home
-        </div>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="ghost" />
-          SkillSet
-        </div>
+        <NavLink to="/">
+          <div className="menuItems">
+            <FontAwesomeIcon icon="home" />
+            Home
+          </div>
+        </NavLink>
+        <NavLink to="/skillset">
+          <div className="menuItems">
+            <FontAwesomeIcon icon="ghost" />
+            SkillSet
+          </div>
+        </NavLink>
         <div className="menuItems">
           <FontAwesomeIcon icon="graduation-cap" />
           Education

@@ -13,18 +13,22 @@ img {
   flex-direction: row;
   align-items: center;
   flex: 0 0 auto;
+  cursor: pointer;
   transition-duration: 0.75s;
 }
-.menuItems:hover {
+.menuItems:hover,
+.menuItems *:focus {
   background-color: white;
   color: #0069aa;
 }
+
 .Sidebar {
   box-sizing: border-box;
   height: 100vh;
   width: 250px;
   /* background-color: #0069aa; */
-  background-color: #0069aae0;
+  /* background-color: #0069aae0; */
+  background-color: #6c5a49;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -49,6 +53,7 @@ img {
 svg {
   margin-right: 5px;
   animation: glow 1s infinite;
+  color: #c8ad55;
 }
 @media only screen and (max-width: 600px) {
   img {
@@ -74,4 +79,8 @@ svg {
   .menuItems:not(.toggle) {
     display: none;
   }
+}
+a {
+  width: 100%;
+  text-decoration: none;
 }

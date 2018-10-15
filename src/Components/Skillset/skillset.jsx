@@ -3,9 +3,10 @@ import ReactDom from "react-dom";
 import "./skillset.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretSquareRight } from "@fortawesome/free-solid-svg-icons";
+import { faCaretSquareRight, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faCaretSquareRight);
+library.add(faCheck);
 
 class Skillset extends Component {
   constructor(props) {
@@ -13,34 +14,33 @@ class Skillset extends Component {
   }
   state = {
     skills: {
-      "Front-End Web Development": [
-        "React",
-        "Angular",
-        "Ember",
-        "Vanilla",
-        "HTML",
-        "CSS",
-        "JS",
-        "SASS",
-        "Node",
-        "Webpack"
-      ],
-      "Back-End Development": ["Python"]
+      "Competitive Coding": ["C++", "C", "Python"],
+      "Front-End Web Development": ["HTML", "CSS", "JS"],
+      "CSS Preprocessors": ["SASS", "LESS", "Styled Components"],
+      "Web Frameworks": ["React", "Vanilla"],
+      "Task Runners": ["Gulp", "Grunt", "Webpack"],
+      "File Bundlers": ["Webpack", "ParcelJS"],
+      "Back-End Development": ["Flask", "php", "node"],
+      "Server Tech": ["Heroku", "000webhost"],
+      Databases: ["mySQL", "mongodb"],
+      "Version Control": ["GIT"],
+      "Online Repositories": ["GitHub", "BitBucket", "gitLab"]
     }
   };
   render() {
     const aman = (
       <div className="Skillset">
-        aman
-        {Object.keys(this.state.skills).forEach(key => {
+        {Object.keys(this.state.skills).map(key => {
           return (
             <div className="domain">
-              <div className="domain-title">{this.state.skills[key]}</div>
+              <div className="domain-title">{key}</div>
               <div className="domainstack">
-                {this.state.skills[key].forEach((item, index) => {
-                  console.log(<div className="skill">{item}</div>);
-                  return <div className="skill">{item}</div>;
-                })}
+                {this.state.skills[key].map(item => (
+                  <div className="skill">
+                    <FontAwesomeIcon icon="check" />
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
           );
