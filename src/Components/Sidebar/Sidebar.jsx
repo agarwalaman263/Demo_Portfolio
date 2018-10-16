@@ -62,14 +62,18 @@ class Sidebar extends Component {
             SkillSet
           </div>
         </NavLink>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="graduation-cap" />
-          Education
-        </div>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="project-diagram" />
-          Projects
-        </div>
+        <NavLink to="/education">
+          <div className="menuItems">
+            <FontAwesomeIcon icon="graduation-cap" />
+            Education
+          </div>
+        </NavLink>
+        <NavLink to="/projects">
+          <div className="menuItems">
+            <FontAwesomeIcon icon="project-diagram" />
+            Projects
+          </div>
+        </NavLink>
         <div className="menuItems">
           <FontAwesomeIcon icon="building" />
           Experience

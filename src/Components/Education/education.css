@@ -1,0 +1,36 @@
+.education {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px;
+  overflow: auto;
+}
+.degree {
+  width: 100%;
+  height: max-content;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.degree-heading {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: lato;
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+.degree-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 5px;
+}

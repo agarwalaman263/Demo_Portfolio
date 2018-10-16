@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDom from "react-dom";
 import "./../../fonts.css";
 import "./Rightcontainer.css";
+
 // import { $ } from "jquery";
 // import Typed from "typed.js";
 
