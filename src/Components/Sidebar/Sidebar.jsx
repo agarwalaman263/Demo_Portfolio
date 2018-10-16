@@ -4,6 +4,7 @@ import "./Sidebar.css";
 import $ from "jquery";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Helmet } from "react-helmet";
 import {
   faGhost,
   faHome,
@@ -44,51 +45,59 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className="Sidebar">
-        <div className="menuItems toggle" onClick={this.toggle}>
-          |||
-        </div>
+      <div>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+        <div className="Sidebar">
+          <div className="menuItems toggle" onClick={this.toggle}>
+            |||
+          </div>
 
-        <img src={this.state.imgURL} alt="" />
-        <NavLink to="/">
+          <img src={this.state.imgURL} alt="" />
+          <NavLink to="/">
+            <div className="menuItems">
+              <FontAwesomeIcon icon="home" />
+              Home
+            </div>
+          </NavLink>
+          <NavLink to="/skillset">
+            <div className="menuItems">
+              <FontAwesomeIcon icon="ghost" />
+              SkillSet
+            </div>
+          </NavLink>
+          <NavLink to="/education">
+            <div className="menuItems">
+              <FontAwesomeIcon icon="graduation-cap" />
+              Education
+            </div>
+          </NavLink>
+          <NavLink to="/projects">
+            <div className="menuItems">
+              <FontAwesomeIcon icon="project-diagram" />
+              Projects
+            </div>
+          </NavLink>
+          <NavLink to="/experience">
+            <div className="menuItems">
+              <FontAwesomeIcon icon="building" />
+              Experience
+            </div>
+          </NavLink>
+
           <div className="menuItems">
-            <FontAwesomeIcon icon="home" />
-            Home
+            <FontAwesomeIcon icon="eye" />
+            Social Apperaence
           </div>
-        </NavLink>
-        <NavLink to="/skillset">
           <div className="menuItems">
-            <FontAwesomeIcon icon="ghost" />
-            SkillSet
+            <FontAwesomeIcon icon="envelope" />
+            Contact ME
           </div>
-        </NavLink>
-        <NavLink to="/education">
           <div className="menuItems">
-            <FontAwesomeIcon icon="graduation-cap" />
-            Education
+            <FontAwesomeIcon icon="sticky-note" />
+            Dev Stack
           </div>
-        </NavLink>
-        <NavLink to="/projects">
-          <div className="menuItems">
-            <FontAwesomeIcon icon="project-diagram" />
-            Projects
-          </div>
-        </NavLink>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="building" />
-          Experience
-        </div>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="eye" />
-          Social Apperaence
-        </div>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="envelope" />
-          Contact ME
-        </div>
-        <div className="menuItems">
-          <FontAwesomeIcon icon="sticky-note" />
-          Dev Stack
         </div>
       </div>
     );

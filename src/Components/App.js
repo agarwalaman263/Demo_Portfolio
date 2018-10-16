@@ -5,6 +5,7 @@ import Rightcontainer from "./Rightcontainer/Rightcontainer";
 import skillset from "./Skillset/skillset";
 import education from "./Education/education";
 import projects from "./Projects/projects";
+import experience from "./Experience/experience";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
             <Route path="/skillset" component={skillset} />
             <Route path="/education" component={education} />
             <Route path="/projects" component={projects} />
-            <Route path="/social" component={Rightcontainer} />
+            <Route path="/experience" component={experience} />
             <Route path="/contact" component={Rightcontainer} />
             <Route component={Rightcontainer} />
           </Switch>

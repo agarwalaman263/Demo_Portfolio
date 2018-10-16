@@ -11,8 +11,11 @@
     "jquery": "^3.3.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-particles-js": "^2.3.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
+    "react-typed": "^1.0.9",
     "typed.js": "^2.0.9"
   },
   "scripts": {

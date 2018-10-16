@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import ReactDom from "react-dom";
 import "./../../fonts.css";
 import "./Rightcontainer.css";
-
+import Particles from "react-particles-js";
 // import { $ } from "jquery";
 // import Typed from "typed.js";
+import Typed from "react-typed";
+import parameters from "./particleConfig";
+import { Helmet } from "react-helmet";
 
 class Rightcontainer extends Component {
   state = {
@@ -14,31 +17,43 @@ class Rightcontainer extends Component {
       "ML Enthusiast.",
       "Tech Geek."
     ],
-    current: "particle making spare in millions"
+    params: parameters
   };
-  // changeDesignation = () => {
-  //   for (let i = 0; i < this.state.list.length; i++) {
-  //     for (var j = 0; j < this.state.list[i].length; j++) {
-  //       var new1 = this.state.list[i].slice(0, j);
-  //       this.setState({ current: new1 });
-  //       for (var start = 1; start < 10; start++)
-  //         setTimeout(function() {}, 3000 * start);
-  //     }
-  //     i = i % this.state.list.length;
-  //   }
-  // };
+
   render() {
     return (
-      <div className="Rightcontainer">
+      <div
+        className="Rightcontainer"
+        style={{
+          position: "relative"
+        }}
+      >
+        <Helmet>
+          <title>Aman Agarawl | Home</title>
+        </Helmet>
+        <Particles
+          params={this.state.params}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndexs: -1
+          }}
+        />
         <div className="name">
-          Hey Folks, My name is <div className="Full-name">Aman Agarwal</div>
+          <div className="start"> Hey Folks, My name is </div>
+          <div className="Full-name">Aman Agarwal</div>
         </div>
         <div className="caption">
-          I am a
-          <div className="designation" onClick={this.changeDesignation}>
-            {this.state.current}
+          <div className="start"> I am a </div>
+          <div className="designation">
+            <Typed
+              strings={this.state.list}
+              typeSpeed={100}
+              backSpeed={100}
+              loop
+            />
           </div>
-          <div className="blinker">|</div>
         </div>
       </div>
     );

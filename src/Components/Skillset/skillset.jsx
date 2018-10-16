@@ -4,6 +4,7 @@ import "./skillset.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretSquareRight, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 library.add(faCaretSquareRight);
 library.add(faCheck);
@@ -30,6 +31,9 @@ class Skillset extends Component {
   render() {
     const aman = (
       <div className="Skillset">
+        <Helmet>
+          <title>Aman Agarawl | Skillset</title>
+        </Helmet>
         {Object.keys(this.state.skills).map(key => {
           return (
             <div className="domain">

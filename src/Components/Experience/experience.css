@@ -1,4 +1,4 @@
-.projects {
+.experience {
   width: 100%;
   color: white;
   display: flex;
@@ -8,7 +8,7 @@
   padding: 30px;
   overflow: auto;
 }
-.project-each {
+.institute {
   width: 100%;
   height: max-content;
   flex: 0 0 auto;
@@ -16,7 +16,7 @@
   flex-direction: column;
   padding-bottom: 20px;
 }
-.project-heading {
+.institute-heading {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -27,31 +27,11 @@
   padding: 5px 0;
   border-bottom: 1px solid black;
 }
-.project-desc {
+.institute-desc {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 5px;
   width: 100%;
-}
-.detail-head {
-  width: 100%;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-}
-.desc-title {
-  display: flex;
-  flex: 0 0 auto;
-  padding: 5px;
-}
-.value {
-  padding: 5px;
-  text-align: right;
-  max-width: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
 }

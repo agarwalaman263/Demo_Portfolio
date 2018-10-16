@@ -16,6 +16,10 @@ img {
   cursor: pointer;
   transition-duration: 0.75s;
 }
+.menuItems:active {
+  background-color: white;
+  color: #0069aa;
+}
 .menuItems:hover,
 .menuItems *:focus {
   background-color: white;

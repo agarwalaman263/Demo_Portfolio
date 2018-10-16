@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDom from "react-dom";
 import "./education.css";
+import { Helmet } from "react-helmet";
 class education extends Component {
   state = {
     education: {
@@ -30,6 +31,9 @@ class education extends Component {
   render() {
     return (
       <div className="education">
+        <Helmet>
+          <title>Aman Agarwal | Education</title>
+        </Helmet>
         {Object.keys(this.state.education).map(key => {
           return (
             <div className="degree">
@@ -52,13 +56,4 @@ class education extends Component {
   }
 }
 
-{
-  /* <div className="degree">
-          <div className="degree-heading">
-            <div className="degree-title">' B.tech</div>
-            <div className="degree-duration">2015-2019</div>
-          </div>
-          <div className="degree-desc">aman</div>
-        </div> */
-}
 export default education;

@@ -17,6 +17,7 @@
   font-family: roboto;
   font-weight: 500;
   font-size: 2.5em;
+  color: white;
 }
 .Full-name,
 .designation {
@@ -24,42 +25,15 @@
   display: inline;
   padding: 0 5px 5px 5px;
   border-radius: 5px;
-  color: white;
+  color: #c8ad55;
   background-color: black;
 }
-.blinker {
-  animation: blink 1s infinite;
-}
 
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
+@media only screen and (max-width: 600px) {
+  .start {
+    display: none;
   }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+  canvas {
+    display: none;
   }
 }
