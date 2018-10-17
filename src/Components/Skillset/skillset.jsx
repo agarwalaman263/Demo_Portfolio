@@ -17,10 +17,10 @@ class Skillset extends Component {
     skills: {
       "Competitive Coding": ["C++", "C", "Python"],
       "Front-End Web Development": ["HTML", "CSS", "JS"],
-      "CSS Preprocessors": ["SASS", "LESS", "Styled Components"],
+      "CSS Preprocessors": ["SASS"],
       "Web Frameworks": ["React", "Vanilla"],
       "Task Runners": ["Gulp", "Grunt", "Webpack"],
-      "File Bundlers": ["Webpack", "ParcelJS"],
+      "File Bundlers": ["Webpack"],
       "Back-End Development": ["Flask", "php", "node"],
       "Server Tech": ["Heroku", "000webhost"],
       Databases: ["mySQL", "mongodb"],

@@ -83,6 +83,9 @@ svg {
   .menuItems:not(.toggle) {
     display: none;
   }
+  .menuItems:focus {
+    display: none;
+  }
 }
 a {
   width: 100%;

@@ -6,32 +6,32 @@ class projects extends Component {
   state = {
     projects: {
       VOS: {
-        status: ["Halted"],
-        Description: ["lorem ipsum"],
-        Stack: ["HTML", "CSS", "JS", "Cheerio", "ELectron", "jQuery", "Node"],
-        Link: ["Private"],
-        Team: ["Karthik Rajaraman", "Aman Agarwal"]
+        Description: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus."
+        ],
+        Link: "Private"
       },
       "Career Matrix": {
-        status: ["Completed"],
-        Description: ["aman"],
-        Stack: ["HTML", "SASS", "Vanilla", "Webpack", "jQuery"],
-        Link: ["Private"],
-        Team: ["Mihir Dutta", "Aman Agarwal"]
+        Description: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus."
+        ],
+        Link: "Private"
       },
       "VIT Feedback Portal": {
-        status: ["Ongoing"],
-        Description: ["aman"],
-        Stack: ["HTML", "SASS", "JS", "jQuery", "PHP"],
-        Link: ["Private"],
-        Team: ["Priyanshi Raj", "Aman Agarwal"]
+        Description: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus."
+        ],
+        Link: (
+          <a href="https://www.google.com" target="_blank">
+            VIT Teachers Portal
+          </a>
+        )
       },
       "Stock Prediction": {
-        status: ["Ongoing"],
-        Description: ["aman"],
-        Stack: ["agarwal"],
-        Link: ["Private"],
-        Team: ["Roshan Tapas Basu", "Aman AGarwal"]
+        Description: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam illum vero autem at aperiam ab aliquam quibusdam iusto iste rerum, dolore unde nisi odio magni obcaecati ea, id temporibus."
+        ],
+        Link: "Private"
       }
     }
   };
@@ -45,28 +45,21 @@ class projects extends Component {
           return (
             <div className="project-each">
               <div className="project-heading">
-                <div className="project-title">{item}</div>
+                <div className="project-title">
+                  {this.state.projects[item].Link == "Private" ? (
+                    <React.Fragment>{item}</React.Fragment>
+                  ) : (
+                    this.state.projects[item].Link
+                  )}
+                </div>
                 <div className="project-status">
-                  {this.state.projects[item].status}
+                  {this.state.projects[item].Link === "Private"
+                    ? this.state.projects[item].Link
+                    : null}
                 </div>
               </div>
               <div className="project-desc">
-                {Object.keys(this.state.projects[item]).map((items, keys) => {
-                  if (items !== "status") {
-                    return (
-                      <div className="detail-head">
-                        <div className="desc-title">{items}</div>
-                        <div className="value">
-                          {this.state.projects[item][items].map(keyss => {
-                            return <div>{keyss}</div>;
-                          })}
-                        </div>
-                      </div>
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
+                {this.state.projects[item].Description}
               </div>
             </div>
           );

@@ -4,7 +4,6 @@ import "./Sidebar.css";
 import $ from "jquery";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Helmet } from "react-helmet";
 import {
   faGhost,
   faHome,
@@ -42,13 +41,17 @@ class Sidebar extends Component {
         .css("display", "flex");
     }
   };
+  hideSidebar = () => {
+    if ($("body").width() <= 600) {
+      $(".menuItems")
+        .not(".toggle")
+        .hide();
+    }
+  };
 
   render() {
     return (
       <div>
-        <Helmet>
-          <title>Home</title>
-        </Helmet>
         <div className="Sidebar">
           <div className="menuItems toggle" onClick={this.toggle}>
             |||
@@ -56,47 +59,43 @@ class Sidebar extends Component {
 
           <img src={this.state.imgURL} alt="" />
           <NavLink to="/">
-            <div className="menuItems">
+            <div className="menuItems" onClick={this.hideSidebar}>
               <FontAwesomeIcon icon="home" />
               Home
             </div>
           </NavLink>
           <NavLink to="/skillset">
-            <div className="menuItems">
+            <div className="menuItems" onClick={this.hideSidebar}>
               <FontAwesomeIcon icon="ghost" />
               SkillSet
             </div>
           </NavLink>
           <NavLink to="/education">
-            <div className="menuItems">
+            <div className="menuItems" onClick={this.hideSidebar}>
               <FontAwesomeIcon icon="graduation-cap" />
               Education
             </div>
           </NavLink>
           <NavLink to="/projects">
-            <div className="menuItems">
+            <div className="menuItems" onClick={this.hideSidebar}>
               <FontAwesomeIcon icon="project-diagram" />
               Projects
             </div>
           </NavLink>
           <NavLink to="/experience">
-            <div className="menuItems">
+            <div className="menuItems" onClick={this.hideSidebar}>
               <FontAwesomeIcon icon="building" />
               Experience
             </div>
           </NavLink>
 
-          <div className="menuItems">
+          <div className="menuItems" onClick={this.hideSidebar}>
             <FontAwesomeIcon icon="eye" />
-            Social Apperaence
+            My Work
           </div>
-          <div className="menuItems">
+          <div className="menuItems" onClick={this.hideSidebar}>
             <FontAwesomeIcon icon="envelope" />
             Contact ME
-          </div>
-          <div className="menuItems">
-            <FontAwesomeIcon icon="sticky-note" />
-            Dev Stack
           </div>
         </div>
       </div>

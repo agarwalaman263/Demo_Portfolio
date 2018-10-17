@@ -4,7 +4,6 @@ import "./../../fonts.css";
 import "./Rightcontainer.css";
 import Particles from "react-particles-js";
 // import { $ } from "jquery";
-// import Typed from "typed.js";
 import Typed from "react-typed";
 import parameters from "./particleConfig";
 import { Helmet } from "react-helmet";
@@ -15,11 +14,12 @@ class Rightcontainer extends Component {
       "Web Developer.",
       "Software Engineer.",
       "ML Enthusiast.",
-      "Tech Geek."
+      "Tech Geek.",
+      "Anime Lover",
+      "Apple Fanboy"
     ],
     params: parameters
   };
-
   render() {
     return (
       <div

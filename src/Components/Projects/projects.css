@@ -55,3 +55,10 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.projects a {
+  text-decoration: underline;
+}
+a:active,
+a:visited {
+  color: white;
+}
