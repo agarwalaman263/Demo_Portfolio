@@ -27,6 +27,7 @@ class Sidebar extends Component {
   state = {
     imgURL: "https://picsum.photos/120/120"
   };
+
   toggle = () => {
     $(".menuItems")
       .not(".toggle")
@@ -89,10 +90,6 @@ class Sidebar extends Component {
             </div>
           </NavLink>
 
-          <div className="menuItems" onClick={this.hideSidebar}>
-            <FontAwesomeIcon icon="eye" />
-            My Work
-          </div>
           <div className="menuItems" onClick={this.hideSidebar}>
             <FontAwesomeIcon icon="envelope" />
             Contact ME

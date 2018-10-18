@@ -20,12 +20,14 @@ img {
   background-color: white;
   color: #0069aa;
 }
-.menuItems:hover,
-.menuItems *:focus {
+.menuItems:hover {
   background-color: white;
   color: #0069aa;
 }
-
+.focus {
+  background-color: white;
+  color: #0069aa;
+}
 .Sidebar {
   box-sizing: border-box;
   height: 100vh;

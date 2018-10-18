@@ -29,7 +29,7 @@ class Rightcontainer extends Component {
         }}
       >
         <Helmet>
-          <title>Aman Agarawl | Home</title>
+          <title>Aman Agarwal | Home</title>
         </Helmet>
         <Particles
           params={this.state.params}
