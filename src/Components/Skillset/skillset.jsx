@@ -32,7 +32,7 @@ class Skillset extends Component {
     const aman = (
       <div className="Skillset">
         <Helmet>
-          <title>Aman Agarawl | Skillset</title>
+          <title>Aman Agarwal | Skillset</title>
         </Helmet>
         {Object.keys(this.state.skills).map(key => {
           return (
